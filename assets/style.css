@@ -71,6 +71,168 @@ body::after {
   z-index: 0;
 }
 
+/* ─── COUNTDOWN BANNER ─── */
+.countdown-banner {
+  position: fixed;
+  top: 62px;
+  left: 0; right: 0;
+  z-index: 99;
+  background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(232,121,249,0.08));
+  border-bottom: 1px solid rgba(124,58,237,0.25);
+  backdrop-filter: blur(12px);
+  padding: 14px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.countdown-banner.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.countdown-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--purple-bright), var(--accent), transparent);
+  opacity: 0.6;
+}
+
+.countdown-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.countdown-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse-dot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.countdown-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.countdown-text strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 44px;
+}
+
+.timer-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple-glow);
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(192,132,252,0.3);
+}
+
+.timer-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.timer-sep {
+  color: var(--purple-dim);
+  font-size: 16px;
+  margin-top: -8px;
+  animation: blink-sep 1s step-end infinite;
+}
+
+@keyframes blink-sep {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.countdown-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.countdown-btn {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-bright));
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.countdown-btn:hover {
+  background: linear-gradient(135deg, var(--purple-bright), var(--accent));
+  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+}
+
+.countdown-close {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.countdown-close:hover {
+  color: var(--red);
+}
+
 /* NAV */
 nav {
   position: fixed;
@@ -1165,228 +1327,4 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   nav ul { display: none; }
-  section { padding: 80px 24px; }
-  .hero { padding: 0 24px; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .members-grid { grid-template-columns: 1fr 1fr; }
-  .socmed-grid { grid-template-columns: 1fr 1fr; }
-  .feed-grid { grid-template-columns: 1fr; }
-  .achievements-grid { grid-template-columns: 1fr 1fr; }
-  footer { flex-direction: column; gap: 24px; text-align: center; }
-  .course-section { padding: 80px 24px; }
-  .course-wrapper { grid-template-columns: 1fr; }
-  .course-perks { gap: 16px; }
-  .perk-item { min-width: 100px; padding: 14px 10px; }
-  .perk-icon { width: 44px; height: 44px; font-size: 22px; }
-}
-
-/* ─── COUNTDOWN BANNER ─── */
-.countdown-banner {
-  position: fixed;
-  top: 62px; /* right below nav */
-  left: 0; right: 0;
-  z-index: 99;
-  background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(232,121,249,0.08));
-  border-bottom: 1px solid rgba(124,58,237,0.25);
-  backdrop-filter: blur(12px);
-  padding: 14px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.countdown-banner.hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.countdown-banner::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--purple-bright), var(--accent), transparent);
-  opacity: 0.6;
-}
-
-.countdown-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.countdown-pulse {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
-  animation: pulse-dot 2s ease-in-out infinite;
-  flex-shrink: 0;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.6; }
-}
-
-.countdown-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--text);
-  letter-spacing: 0.5px;
-}
-
-.countdown-text strong {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.countdown-timer {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 18px;
-  color: var(--text);
-}
-
-.timer-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  min-width: 44px;
-}
-
-.timer-num {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--purple-glow);
-  line-height: 1;
-  text-shadow: 0 0 10px rgba(192,132,252,0.3);
-}
-
-.timer-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  color: var(--text-dim);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.timer-sep {
-  color: var(--purple-dim);
-  font-size: 16px;
-  margin-top: -8px;
-  animation: blink-sep 1s step-end infinite;
-}
-
-@keyframes blink-sep {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-.countdown-cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.countdown-code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  padding: 6px 14px;
-  background: rgba(124,58,237,0.15);
-  border: 1px dashed rgba(124,58,237,0.4);
-  color: var(--purple-glow);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.countdown-code:hover {
-  background: rgba(124,58,237,0.25);
-  border-style: solid;
-  border-color: var(--purple-bright);
-}
-
-.countdown-code.copied {
-  background: rgba(74,222,128,0.15);
-  border-color: var(--green);
-  color: var(--green);
-}
-
-.countdown-btn {
-  padding: 8px 20px;
-  background: linear-gradient(135deg, var(--purple), var(--purple-bright));
-  color: white;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.countdown-btn:hover {
-  background: linear-gradient(135deg, var(--purple-bright), var(--accent));
-  box-shadow: 0 0 20px rgba(168,85,247,0.4);
-}
-
-.countdown-close {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  color: var(--text-dim);
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.2s;
-  padding: 0;
-}
-
-.countdown-close:hover {
-  color: var(--red);
-}
-
-/* Push hero down when banner is visible */
-.hero {
-  padding-top: 62px; /* nav height */
-}
-
-@media (max-width: 900px) {
-  .countdown-banner {
-    padding: 12px 24px;
-    top: 58px;
-    gap: 12px;
-  }
-  .countdown-left { gap: 10px; }
-  .countdown-text { font-size: 11px; }
-  .countdown-timer { font-size: 14px; gap: 4px; }
-  .timer-num { font-size: 18px; }
-  .timer-unit { min-width: 36px; }
-  .countdown-cta { gap: 8px; }
-  .countdown-code { font-size: 10px; padding: 5px 10px; }
-  .countdown-btn { font-size: 10px; padding: 6px 14px; }
-  .countdown-close { right: 10px; }
-  .hero { padding-top: 58px; }
-}
+  section
