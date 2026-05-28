@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EbookrVvip Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/style.css">
+<base target="_blank">
+</head>
+<body>
+
+<!-- COUNTDOWN BANNER -->
+<div class="countdown-banner" id="countdownBanner">
+  <div class="countdown-left">
+    <div class="countdown-pulse"></div>
+    <span class="countdown-text">🔥 <strong> Promo 33% </strong> — Berlaku sampai 1 Juni 2026</span>
+  </div>
+  <div class="countdown-timer" id="countdownTimer">
+    <div class="timer-unit">
+      <span class="timer-num" id="cd-days">00</span>
+      <span class="timer-label">Hari</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-unit">
+      <span class="timer-num" id="cd-hours">00</span>
+      <span class="timer-label">Jam</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-unit">
+      <span class="timer-num" id="cd-minutes">00</span>
+      <span class="timer-label">Menit</span>
+    </div>
+    <span class="timer-sep">:</span>
+    <div class="timer-unit">
+      <span class="timer-num" id="cd-seconds">00</span>
+      <span class="timer-label">Detik</span>
+    </div>
+  </div>
+  <div class="countdown-cta">
+    <a href="https://lynk.id/randiansyah/46k59l3j9nzg" class="countdown-btn" target="_blank">Gas Order</a>
+  </div>
+  <button class="countdown-close" onclick="closeBanner()" title="Tutup">×</button>
+</div>
+
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<<nav>
+  <div class="logo">EBOOKR<span>VVIP</span>.id</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#members">Members</a></li>
+    <li><a href="#socmed">Community</a></li>
+    <li><a href="#achievements">Hall of Fame</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+
+  <div class="hero-eyebrow">Indonesian Cybersecurity Community</div>
+  <h1>
+    <span class="line1">HUNT THE</span>
+    <span class="line2">VULNERABILITIES</span>
+  </h1>
+  <p class="hero-sub">
+    Komunitas bug hunter Indonesia yang bergerak di bidang keamanan siber.<br>
+    Kami menemukan, melaporkan, dan mendokumentasikan kerentanan untuk membuat internet lebih aman.
+  </p>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-num">179+</span>
+      <span class="stat-label">Bug Hunters</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">1337+</span>
+      <span class="stat-label">Bugs Reported</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">$1337+</span>
+      <span class="stat-label">Total Bounties</span>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="https://lynk.id/randiansyah" class="btn-primary" target="_blank">Join Course</a>
+    <a href="https://linktr.ee/ebookr.vvip" class="btn-outline" target="_blank">Follow Us</a>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="section-title reveal">Siapa Kami?</div>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>EBOOKR VVIP adalah komunitas independen para peneliti keamanan, ethical hacker, dan bug bounty hunter dari seluruh Indonesia. Didirikan oleh sekumpulan passionate security enthusiast yang percaya bahwa kolaborasi adalah kunci dalam dunia cybersecurity.</p>
+      <p>Kami aktif berpartisipasi di platform bug bounty global seperti HackerOne, Bugcrowd, dan Intigriti, dengan fokus pada web application security, API vulnerabilities, Android application penetration testing,  dan network penetration testing.</p>
+      <p>Bergabunglah bersama kami untuk berbagi pengetahuan, writeup, dan pengalaman di dunia offensive security.</p>
+    </div>
+
+    <div class="terminal-box reveal">
+      <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span class="terminal-title">ebookrvvip@id:~$</span>
+      </div>
+      <div class="term-line"><span class="term-prompt">❯ </span><span class="term-cmd">whoami</span></div>
+      <div class="term-line term-out">Indonesian Bug Hunter Community</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">❯ </span><span class="term-cmd">cat mission.txt</span></div>
+      <div class="term-line term-out">"Securing the digital Indonesia,</div>
+      <div class="term-line term-out">&nbsp;one bug at a time."</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">❯ </span><span class="term-cmd">./scan --target=internet --mode=ethical</span></div>
+      <div class="term-line term-success">[✓] Recon completed</div>
+      <div class="term-line term-success">[✓] 3 critical vulns found</div>
+      <div class="term-line term-warn">[!] Reporting to vendor...</div>
+      <div class="term-line term-success">[✓] Patch deployed. Internet safer.</div>
+      <br>
+      <div class="term-line"><span class="term-prompt">❯ </span><span class="term-cursor"></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MEMBERS -->
+<!--
+<section id="members">
+  <div class="section-label">Members</div>
+  <div class="section-title reveal">Top Hunters</div>
+
+  <div class="members-grid">
+    <div class="member-card reveal">
+      <div class="member-avatar">
+        🦅
+        <div class="online-dot"></div>
+      </div>
+      <div class="member-handle">randixploit</div>
+      <div class="member-role">Core Member · Pentest Lead</div>
+      <div class="member-tags">
+        <span class="tag">Web AppSec</span>
+        <span class="tag">API Recon</span>
+        <span class="tag">Automation</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">48</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$12K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×7</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="member-avatar">🕷️</div>
+      <div class="member-handle">vxNull</div>
+      <div class="member-role">Senior Hunter · OSINT Specialist</div>
+      <div class="member-tags">
+        <span class="tag">OSINT</span>
+        <span class="tag">Subdomain</span>
+        <span class="tag">Recon-ng</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">61</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$18K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×11</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="member-avatar">🔐</div>
+      <div class="member-handle">cr4ckd3v</div>
+      <div class="member-role">Hunter · Mobile Security</div>
+      <div class="member-tags">
+        <span class="tag">Android</span>
+        <span class="tag">Frida</span>
+        <span class="tag">APK Reverse</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">33</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$9K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×5</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="member-avatar">⚡</div>
+      <div class="member-handle">0xSilent</div>
+      <div class="member-role">Hunter · Network & Infra</div>
+      <div class="member-tags">
+        <span class="tag">Network</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">Nuclei</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">27</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$7K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×4</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="member-avatar">🧬</div>
+      <div class="member-handle">bytePhantom</div>
+      <div class="member-role">Hunter · Cloud Security</div>
+      <div class="member-tags">
+        <span class="tag">AWS</span>
+        <span class="tag">S3 Misconfig</span>
+        <span class="tag">IAM</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">19</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$6K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×3</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="member-avatar">🌑</div>
+      <div class="member-handle">gr4vityOff</div>
+      <div class="member-role">Hunter · Crypto & Blockchain</div>
+      <div class="member-tags">
+        <span class="tag">Web3</span>
+        <span class="tag">Smart Contract</span>
+        <span class="tag">DeFi</span>
+      </div>
+      <div class="member-stats">
+        <div class="m-stat">
+          <span class="m-stat-num">22</span>
+          <span class="m-stat-label">Bugs</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">$14K</span>
+          <span class="m-stat-label">Bounties</span>
+        </div>
+        <div class="m-stat">
+          <span class="m-stat-num">P1×6</span>
+          <span class="m-stat-label">Critical</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<div class="divider"></div>
+
+<!-- SOCMED -->
+<section id="socmed" class="socmed-section">
+  <div class="section-label">Community</div>
+  <div class="section-title reveal">Follow & Connect</div>
+
+  <div class="socmed-grid reveal">
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">𝕏</div>
+      <div class="socmed-name">X / Twitter</div>
+      <div class="socmed-handle">@ebookr.vvip</div>
+      <div class="socmed-followers">unknown</div>
+      <div class="socmed-flabel">Followers</div>
+    </a>
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">💬</div>
+      <div class="socmed-name">Telegram Channel</div>
+      <div class="socmed-handle">@ebookrvvipchannel</div>
+      <div class="socmed-followers">unknown</div>
+      <div class="socmed-flabel">Members</div>
+    </a>
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">💬</div>
+      <div class="socmed-name">Telegram Group</div>
+      <div class="socmed-handle">@ebookrvvippublic</div>
+      <div class="socmed-followers">unknown</div>
+      <div class="socmed-flabel">Members</div>
+    </a>
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">🎮</div>
+      <div class="socmed-name">Discord</div>
+      <div class="socmed-handle">https://discord.gg/WJWQrkSq8</div>
+      <div class="socmed-followers">Unknown</div>
+      <div class="socmed-flabel">Members</div>
+    </a>
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">🅾</div>
+      <div class="socmed-name">Instagram</div>
+      <div class="socmed-handle">@ebookr.vvip</div>
+      <div class="socmed-followers">Unknown</div>
+      <div class="socmed-flabel">Members</div>
+    </a>
+    <a href="#" class="socmed-card">
+      <div class="socmed-icon">▶️</div>
+      <div class="socmed-name">YouTube</div>
+      <div class="socmed-handle">@ebookrvvip</div>
+      <div class="socmed-followers">Unknown</div>
+      <div class="socmed-flabel">Members</div>
+    </a>
+  </div>
+
+  <!-- Feed posts -->
+  <!--
+  <div class="section-label reveal" style="margin-bottom: 24px;">Latest Posts</div>
+  <div class="feed-grid">
+    <div class="feed-post reveal">
+      <div class="feed-platform"><div class="platform-dot"></div>X / Twitter</div>
+      <div class="feed-content">
+        Baru submit P1 ke <span class="highlight">@HackerOne</span> — IDOR di endpoint admin yang nge-bypass authorization check. Writeup coming soon 🔥
+        <span class="highlight">#BugBounty #IDOR #WebSecurity</span>
+      </div>
+      <div class="feed-engagement">
+        <span class="eng-item">♥ 142</span>
+        <span class="eng-item">↺ 38</span>
+        <span class="eng-item">💬 21</span>
+      </div>
+      <div class="feed-meta">
+        <span class="feed-author"><span>@randixploit</span></span>
+        <span class="feed-time">2 jam lalu</span>
+      </div>
+    </div>
+
+    <div class="feed-post reveal">
+      <div class="feed-platform"><div class="platform-dot"></div>Telegram</div>
+      <div class="feed-content">
+        <span class="highlight">[Writeup]</span> Cara bypass WAF menggunakan Unicode normalization di input parameter. Link artikel lengkap ada di channel. Jangan lupa share ke teman hunter kalian!
+      </div>
+      <div class="feed-engagement">
+        <span class="eng-item">👁 892</span>
+        <span class="eng-item">🔁 156</span>
+      </div>
+      <div class="feed-meta">
+        <span class="feed-author"><span>@vxNull</span></span>
+        <span class="feed-time">5 jam lalu</span>
+      </div>
+    </div>
+
+    <div class="feed-post reveal">
+      <div class="feed-platform"><div class="platform-dot"></div>Medium</div>
+      <div class="feed-content">
+        <span class="highlight">New writeup:</span> "From Zero to $5,000 — How I Found a Critical RCE in a Fortune 500 Company's Public API Using Only Open Source Tools"
+      </div>
+      <div class="feed-engagement">
+        <span class="eng-item">👏 312</span>
+        <span class="eng-item">💬 47</span>
+        <span class="eng-item">🔖 89</span>
+      </div>
+      <div class="feed-meta">
+        <span class="feed-author"><span>@cr4ckd3v</span></span>
+        <span class="feed-time">1 hari lalu</span>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<div class="divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<!--
+<section id="achievements">
+  <div class="section-label">Hall of Fame</div>
+  <div class="section-title reveal">Community Achievements</div>
+
+  <div class="achievements-grid">
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-name">Top 10 HackerOne</div>
+      <div class="achievement-desc">3 anggota kami masuk leaderboard global HackerOne Q1 2025</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">💀</div>
+      <div class="achievement-name">Critical Hunter</div>
+      <div class="achievement-desc">Total 52 vulnerabilitas P1/Critical berhasil ditemukan dan dilaporkan</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">🌐</div>
+      <div class="achievement-name">CVE Published</div>
+      <div class="achievement-desc">7 CVE resmi atas nama anggota BugHunter.id di database NVD</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">🎓</div>
+      <div class="achievement-name">Knowledge Sharing</div>
+      <div class="achievement-desc">100+ writeup teknis dipublikasikan, dibaca lebih dari 500K kali</div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- COURSE -->
+<section id="course" class="course-section">
+  <div class="section-label">Course</div>
+  <div class="section-title reveal">Penetration Testing<br><span style="background: linear-gradient(135deg, var(--purple-bright), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Mastery Course</span></div>
+
+  <!-- Perks row -->
+  <div class="course-perks reveal">
+    <div class="perk-item">
+      <div class="perk-icon">🎥</div>
+      <div class="perk-label">Video PoC<br>Included</div>
+    </div>
+    <div class="perk-item">
+      <div class="perk-icon">🛠️</div>
+      <div class="perk-label">Exclusive<br>Tools</div>
+    </div>
+    <div class="perk-item">
+      <div class="perk-icon">🎯</div>
+      <div class="perk-label">Live Target<br>& Challenge</div>
+    </div>
+    <div class="perk-item">
+      <div class="perk-icon">💬</div>
+      <div class="perk-label">Private Group<br>+ Konsultasi</div>
+    </div>
+  </div>
+
+  <div class="course-wrapper">
+
+    <!-- LEFT: Course Card -->
+    <div class="course-card reveal">
+      <div class="course-img-wrap" id="courseImgWrap">
+        <div class="course-badge">VVIP Access</div>
+        <img src="file:///C:/Users/randixploit/Downloads/poster.png" alt="EBOOKR VVIP Penetration Testing Course" id="courseImg">
+      </div>
+
+      <div class="course-body">
+        <div class="course-level">Pemula & Intermediate</div>
+        <div class="course-title">Kursus Penetration Testing Ethical Hacking</div>
+        <div class="course-desc">
+          Belajar Cyber Security dan Penetration Testing dengan cara santai, jelas, dan mudah dipahami. Materi dari real-world case — bukan cuma teori. Lengkap dengan video PoC supaya kamu bisa langsung praktik.
+        </div>
+
+        <div class="course-price-wrap">
+          <span class="course-price-old">Rp 150.000</span>
+          <span class="course-price-new">Rp 100.000</span>
+          <span class="course-discount">SAVE 33%</span>
+        </div>
+
+        <a href="https://lynk.id/randiansyah/46k59l3j9nzg" class="course-cta" target="_blank">
+          <span>🔥 &nbsp;Gas Order Sekarang</span>
+        </a>
+
+        <div style="margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="tag">Ethical Hacking</span>
+          <span class="tag">Bug Bounty</span>
+          <span class="tag">Pentest</span>
+          <span class="tag">Real-World</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Module accordion -->
+    <div class="course-modules reveal">
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">🐧</div>
+          <div class="module-name">Dasar Linux & Terminal</div>
+          <div class="module-count">Foundation</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">Navigasi filesystem & permission</div>
+          <div class="module-item">Bash scripting dasar</div>
+          <div class="module-item">Tools recon & enumeration</div>
+        </div>
+      </div>
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">🌐</div>
+          <div class="module-name">Website Penetration Testing</div>
+          <div class="module-count">5 topik</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">IDOR — Insecure Direct Object Reference</div>
+          <div class="module-item">SQL Injection</div>
+          <div class="module-item">XSS — Cross-Site Scripting</div>
+          <div class="module-item">Authentication Bypass</div>
+          <div class="module-item">Logic Error & lainnya</div>
+        </div>
+      </div>
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">📡</div>
+          <div class="module-name">Network Penetration Testing</div>
+          <div class="module-count">4 topik</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">DNS Vulnerability</div>
+          <div class="module-item">Enumeration</div>
+          <div class="module-item">Port Scanning</div>
+          <div class="module-item">Information Gathering & lainnya</div>
+        </div>
+      </div>
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">📱</div>
+          <div class="module-name">Mobile App Pentest</div>
+          <div class="module-count">6 topik</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">Reverse Engineering</div>
+          <div class="module-item">ADB</div>
+          <div class="module-item">Rooting Emulator</div>
+          <div class="module-item">APK Analysis</div>
+          <div class="module-item">Bypass SSL Pinning</div>
+          <div class="module-item">Bypass Deteksi Root & lainnya</div>
+        </div>
+      </div>
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">🎬</div>
+          <div class="module-name">Video PoC & Live Challenge</div>
+          <div class="module-count">Bonus</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">Video proof-of-concept tiap exploit</div>
+          <div class="module-item">Live target & challenge untuk praktik langsung</div>
+        </div>
+      </div>
+
+      <div class="module-group" onclick="toggleModule(this)">
+        <div class="module-header">
+          <div class="module-icon">📃</div>
+          <div class="module-name">Lainnya</div>
+          <div class="module-count">Bonus</div>
+          <div class="module-arrow">▼</div>
+        </div>
+        <div class="module-items">
+          <div class="module-item">Tools ekslusif (ebookr v1.5)</div>
+          <div class="module-item">Grup EBOOKR VVIP Private via Telegram</div>
+          <div class="module-item">Konsultasi dengan Admin</div>
+        </div>
+      </div>
+
+      
+
+      <!-- Contact row -->
+      <div class="module-contact-row">
+        <a href="https://t.me/testimoniebookr" target="_blank" class="module-contact-btn">
+          💬 &nbsp;Lihat Testimoni
+        </a>
+        <a href="https://t.me/randixploit1337" target="_blank" class="module-contact-btn">
+          🤖 &nbsp;Hubungi Admin
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">EBOOKR<span>VVIP</span>.id</div>
+  <div class="footer-copy">© 2025 EbookrVvip.id — Ethical Hacking Community</div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="https://discord.gg/WJWQrkSq8">Discord</a>
+    <a href="https://github.com/ebookrvvip">GitHub</a>
+  </div>
+</footer>
+
+<script script="assets/script.js">
+</body>
+</html>
