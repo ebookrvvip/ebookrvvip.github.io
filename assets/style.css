@@ -1327,4 +1327,30 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   nav ul { display: none; }
-  section
+  section { padding: 80px 24px; }
+  .hero { padding: 0 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .members-grid { grid-template-columns: 1fr 1fr; }
+  .socmed-grid { grid-template-columns: 1fr 1fr; }
+  .feed-grid { grid-template-columns: 1fr; }
+  .achievements-grid { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 24px; text-align: center; }
+  .course-section { padding: 80px 24px; }
+  .course-wrapper { grid-template-columns: 1fr; }
+  .course-perks { gap: 16px; }
+  .perk-item { min-width: 100px; padding: 14px 10px; }
+  .perk-icon { width: 44px; height: 44px; font-size: 22px; }
+  .countdown-banner {
+    padding: 12px 24px;
+    top: 58px;
+    gap: 12px;
+  }
+  .countdown-left { gap: 10px; }
+  .countdown-text { font-size: 11px; }
+  .countdown-timer { font-size: 14px; gap: 4px; }
+  .timer-num { font-size: 18px; }
+  .timer-unit { min-width: 36px; }
+  .countdown-cta { gap: 8px; }
+  .countdown-btn { font-size: 10px; padding: 6px 14px; }
+  .countdown-close { right: 10px; }
+}
